@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './svg/mgmt/sailing-boat.svg';
+import wait from './svg/mgmt/wait.svg';
 import './App.css';
 
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
@@ -10,12 +11,12 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Welcome to Posts App</h1>
         </header>
         <Navbar>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="#">React-Bootstrap</a>
+              <a href="#">Home</a>
             </Navbar.Brand>
           </Navbar.Header>
           <Nav>
@@ -29,9 +30,15 @@ class App extends Component {
               <MenuItem eventKey={3.4}>Separated link</MenuItem>
             </NavDropdown>
           </Nav>
+          <Nav pullRight>
+            <Navbar.Text>
+              Signed in as: <Navbar.Link href="#">TestTest</Navbar.Link>
+            </Navbar.Text>
+            <button type="button" class="btn btn-default navbar-btn">Sign in</button>
+          </Nav>
         </Navbar>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          No idea what i'll do <img src={wait}/>
         </p>
       </div>
     );
